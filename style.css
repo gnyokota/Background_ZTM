@@ -22,6 +22,10 @@ h2{
   font-size:2rem;
 }
 
+#selector{
+  margin: 20px;
+}
+
 button{
   border: solid 3px black;
   color: #000000;
