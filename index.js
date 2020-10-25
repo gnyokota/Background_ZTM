@@ -12,8 +12,7 @@ colorOne.addEventListener("input", setGradient);
 
 colorTwo.addEventListener("input",setGradient);
 
-var final = gradientSelector.addEventListener("change",selectorValue);
-
+gradientSelector.addEventListener("change",selectorValue);
 
 button.addEventListener("click", randomColor);
 
