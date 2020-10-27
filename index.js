@@ -29,7 +29,10 @@ function setGradient(){
   text.textContent = `background-image: ${body.style.background};`;
 }
 
+
+
 function randomColor(event){
+  if (backgroundType != null){
     var number1 = Math.round(Math.random()*1000);
     var number2 = Math.round(Math.random()*1000);
     var number3 = Math.round(Math.random()*1000);
@@ -39,5 +42,9 @@ function randomColor(event){
 
     body.style.background = `linear-gradient(${backgroundType}, rgb( ${number1}, ${number2}, ${number3}), rgb( ${number4}, ${number5}, ${number6})`;
     text.textContent = "background-image: " + body.style.background + ";";
+  }
+  else{
+    alert("You should select a gradient type!!")
+  }
 }
 
