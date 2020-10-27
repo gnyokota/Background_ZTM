@@ -4,8 +4,8 @@ var text = document.getElementsByTagName("h3")[0];
 var body = document.getElementById("mainBody");
 var button = document.getElementById("btnRandom");
 var gradientSelector = document.getElementById("gradient-selector");
-// closure
-let selectBackground;
+//global variable for closure
+let backgroundType;
 
 
 colorOne.addEventListener("input", setGradient);
@@ -19,13 +19,13 @@ button.addEventListener("click", randomColor);
 gradientSelector.addEventListener("change", selectorValue);
 
 function selectorValue(event){
-  selectBackground = (event.target.value).replace("-", " ");
-  return selectBackground;
+  backgroundType = (event.target.value).replace("-", " ");
+  return backgroundType;
 }
 
 
 function setGradient(){
-  body.style.background = `linear-gradient(${selectBackground}, ${colorOne.value}, ${colorTwo.value})`;
+  body.style.background = `linear-gradient(${backgroundType}, ${colorOne.value}, ${colorTwo.value})`;
   text.textContent = `background-image: ${body.style.background};`;
 }
 
@@ -37,7 +37,7 @@ function randomColor(event){
     var number5 = Math.round(Math.random()*1000);
     var number6 = Math.round(Math.random()*1000);
 
-    body.style.background = `linear-gradient(${selectBackground}, rgb( ${number1}, ${number2}, ${number3}), rgb( ${number4}, ${number5}, ${number6})`;
+    body.style.background = `linear-gradient(${backgroundType}, rgb( ${number1}, ${number2}, ${number3}), rgb( ${number4}, ${number5}, ${number6})`;
     text.textContent = "background-image: " + body.style.background + ";";
 }
 

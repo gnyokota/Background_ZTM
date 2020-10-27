@@ -2,8 +2,9 @@ body{
   color: #000000;
   font-family: 'Chilanka', cursive;
   text-align: center;
-  margin-top: 15%;
+  margin-top: 10%;
   background-image: linear-gradient( to right, #0d7377, #32e0c4);
+  height: 100%;
 }
 
 h1{
@@ -48,3 +49,10 @@ p{
   font-size: 0.8rem;
   padding-top: 100px;
 }
+
+@media(max-device-width: 480px){
+  body{
+    padding: 300px 0;
+    text-align: center;
+  };
+};
