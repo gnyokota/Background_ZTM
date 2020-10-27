@@ -54,5 +54,6 @@ p{
   body{
     padding: 300px 0;
     text-align: center;
+    background-size: 100% 100%;
   };
 };
